@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohammed Niyaz | AI/ML & IoT Developer</title>
+  <meta name="description"
+    content="Portfolio of Mohammed Niyaz — AI/ML Developer, IoT Engineer, and Problem Solver building intelligent real-world systems." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- SPACE BACKGROUND -->
+  <div class="space-bg">
+    <div class="space-nebula"></div>
+    <div class="stars-layer stars-layer-1"></div>
+    <div class="stars-layer stars-layer-2"></div>
+    <div class="stars-layer stars-layer-3"></div>
+  </div>
+
+  <div class="cursor-glow"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo" onclick="showPage('home-page'); return false;">&lt;MN /&gt;</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#" onclick="showPage('home-page'); return false;">Home</a></li>
+        <li><a href="#" onclick="showPage('skills-page'); return false;">Skills</a></li>
+        <li><a href="#" onclick="showPage('projects-page'); return false;">Projects</a></li>
+        <li><a href="#" onclick="showPage('experience-page'); return false;">Experience</a></li>
+        <li><a href="#" onclick="showPage('education-page'); return false;">Education</a></li>
+        <li><a href="#" onclick="showPage('contact-page'); return false;">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HOME PAGE -->
+  <div class="page active" id="home-page">
+
+  <!-- HERO (SPLIT SCREEN) -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="particles"></div>
+
+    <!-- LEFT SIDEBAR NAVIGATION -->
+    <div class="hero-sidebar">
+      <div class="glass-nav reveal-left">
+        <nav class="sidebar-nav">
+          <a href="#" onclick="showPage('home-page'); return false;" class="nav-item">About</a>
+          <a href="#" onclick="showPage('skills-page'); return false;" class="nav-item">Skills</a>
+          <a href="#" onclick="showPage('projects-page'); return false;" class="nav-item">Projects</a>
+          <a href="#" onclick="showPage('experience-page'); return false;" class="nav-item">Experience</a>
+          <a href="#" onclick="showPage('education-page'); return false;" class="nav-item">Education</a>
+          <a href="#" onclick="showPage('contact-page'); return false;" class="nav-item">Contact</a>
+        </nav>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE (MAIN CONTENT) -->
+    <div class="hero-main reveal-right">
+      <div class="hero-content">
+        <div class="hero-badge"><span class="dot"></span> Open to opportunities</div>
+        <h1 class="hero-name">MOHAMMED NIYAZ</h1>
+        <p class="hero-role">AI/ML Developer · IoT Engineer</p>
+        <p class="hero-tagline"><span id="tagline"></span><span class="cursor">|</span></p>
+
+        <!-- ABOUT PREVIEW -->
+        <div class="hero-about">
+          <p>I am an AI/ML and IoT-focused developer passionate about building real-world intelligent systems. I work on
+            combining machine learning with hardware to solve practical problems.</p>
+          <p>Currently gaining real-world experience in data processing, model building, and deployment at an AI/ML
+            company.</p>
+        </div>
+
+        <div class="hero-cta">
+          <a href="#" onclick="showPage('projects-page'); return false;" class="btn btn-primary">View My Work →</a>
+          <a href="#" onclick="showPage('contact-page'); return false;" class="btn btn-secondary">Get In Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION (Full Details) -->
+  <section id="about" style="padding: 4rem 2rem;">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <span class="section-label">// About Me</span>
+        <h2 class="section-title">Passionate About Intelligent Systems</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-image-wrapper reveal-left">
+          <!-- SKILLS BOOK: Closed State -->
+          <div class="skills-book-closed" id="skills-book-closed" onclick="openSkillsBook()">
+            <div class="book-glow-ring"></div>
+            <div class="book-hologram-lines"></div>
+            <div class="book-icon">📘</div>
+            <div class="book-label">Skills</div>
+            <div class="book-subtitle">Click to explore</div>
+            <div class="book-particles">
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span>
+            </div>
+            <div class="book-shimmer"></div>
+          </div>
+
+          <!-- SKILLS BOOK: Open State -->
+          <div class="skills-book-open" id="skills-book-open">
+            <div class="book-holo-scanline"></div>
+            <div class="book-ambient-particles">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="book-header">
+              <h3 class="book-title">📖 Skills Book</h3>
+              <button class="book-close-btn" onclick="closeSkillsBook()" aria-label="Close">✕</button>
+            </div>
+
+            <div class="book-pages-container">
+              <!-- Page 1: AI / ML -->
+              <div class="book-page active" data-page="0">
+                <div class="page-category-icon">🧠</div>
+                <h4 class="page-category-title">AI & Machine Learning</h4>
+                <div class="page-skills-grid">
+                  <div class="page-skill-badge">Python</div>
+                  <div class="page-skill-badge">Scikit-Learn</div>
+                  <div class="page-skill-badge">NLP</div>
+                  <div class="page-skill-badge">Tesseract OCR</div>
+                  <div class="page-skill-badge">Data Preprocessing</div>
+                  <div class="page-skill-badge">Model Training</div>
+                </div>
+              </div>
+
+              <!-- Page 2: IoT -->
+              <div class="book-page" data-page="1">
+                <div class="page-category-icon">📡</div>
+                <h4 class="page-category-title">IoT & Embedded Systems</h4>
+                <div class="page-skills-grid">
+                  <div class="page-skill-badge">Arduino</div>
+                  <div class="page-skill-badge">ESP32</div>
+                  <div class="page-skill-badge">Sensor Integration</div>
+                  <div class="page-skill-badge">Embedded C</div>
+                  <div class="page-skill-badge">Real-time Monitoring</div>
+                  <div class="page-skill-badge">Wearables</div>
+                </div>
+              </div>
+
+              <!-- Page 3: Programming -->
+              <div class="book-page" data-page="2">
+                <div class="page-category-icon">💻</div>
+                <h4 class="page-category-title">Programming & Tools</h4>
+                <div class="page-skills-grid">
+                  <div class="page-skill-badge">C / C++</div>
+                  <div class="page-skill-badge">Java</div>
+                  <div class="page-skill-badge">Python</div>
+                  <div class="page-skill-badge">Streamlit</div>
+                  <div class="page-skill-badge">GitHub</div>
+                  <div class="page-skill-badge">MySQL</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Page Navigation -->
+            <div class="book-nav">
+              <button class="book-nav-btn" id="book-prev" onclick="bookPageNav(-1)">← Prev</button>
+              <div class="book-page-dots">
+                <span class="book-dot active" onclick="bookGoToPage(0)"></span>
+                <span class="book-dot" onclick="bookGoToPage(1)"></span>
+                <span class="book-dot" onclick="bookGoToPage(2)"></span>
+              </div>
+              <button class="book-nav-btn" id="book-next" onclick="bookPageNav(1)">Next →</button>
+            </div>
+          </div>
+        </div>
+        <div class="about-text reveal-right">
+          <p>I am an AI/ML and IoT-focused developer passionate about building real-world intelligent systems. I work on
+            combining machine learning with hardware to solve practical problems.</p>
+          <p>I have hands-on experience in building ML models, working with unstructured data using OCR and NLP, and
+            developing IoT-based solutions like smart safety systems.</p>
+          <p>Currently, I am working as an intern in an AI/ML company, gaining real-world experience in data processing,
+            model building, and deployment.</p>
+          <div class="about-stats">
+            <div class="stat-item">
+              <div class="stat-number" data-count="4" data-suffix="+">0</div>
+              <div class="stat-label">Projects</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-count="1" data-suffix="">0</div>
+              <div class="stat-label">Internships</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-count="3" data-suffix="+">0</div>
+              <div class="stat-label">Skills Areas</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </div><!-- /home-page -->
+
+  <!-- SKILLS PAGE -->
+  <div class="page" id="skills-page">
+  <section id="skills">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <span class="section-label">// Skills</span>
+        <h2 class="section-title">Technologies & Expertise</h2>
+      </div>
+      <div class="skills-grid">
+        <!-- AI / ML -->
+        <div class="skill-category reveal">
+          <div class="skill-icon">🧠</div>
+          <h3>AI & Machine Learning</h3>
+          <div class="skill-item">
+            <div class="skill-name">Python</div>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" data-width="85%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">Scikit-Learn</div>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" data-width="75%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">NLP</div>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" data-width="70%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">Tesseract OCR</div>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" data-width="72%"></div>
+            </div>
+          </div>
+          <div class="tech-badges">
+            <span class="tech-badge">Data Preprocessing</span>
+            <span class="tech-badge">Model Training</span>
+            <span class="tech-badge">OCR</span>
+          </div>
+        </div>
+        <!-- IoT & Embedded -->
+        <div class="skill-category reveal">
+          <div class="skill-icon">📡</div>
+          <h3>IoT & Embedded Systems</h3>
+          <div class="skill-item">
+            <div class="skill-name">Arduino</div>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" data-width="82%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">ESP32</div>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" data-width="75%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">Sensor Integration</div>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" data-width="78%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">Embedded C</div>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" data-width="70%"></div>
+            </div>
+          </div>
+          <div class="tech-badges">
+            <span class="tech-badge">Real-time Monitoring</span>
+            <span class="tech-badge">Prototyping</span>
+            <span class="tech-badge">Wearables</span>
+          </div>
+        </div>
+        <!-- Programming & Development -->
+        <div class="skill-category reveal">
+          <div class="skill-icon">💻</div>
+          <h3>Programming & Development</h3>
+          <div class="skill-item">
+            <div class="skill-info"><span>C / C++</span></div>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" data-width="78%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span>Java</span></div>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" data-width="72%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span>Python</span></div>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" data-width="85%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span>HTML / Streamlit</span></div>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" data-width="75%"></div>
+            </div>
+          </div>
+          <div class="tech-badges">
+            <span class="tech-badge">Streamlit</span>
+            <span class="tech-badge">Web Basics</span>
+            <span class="tech-badge">Problem Solving</span>
+          </div>
+        </div>
+        <!-- Tools & Platforms -->
+        <div class="skill-category reveal">
+          <div class="skill-icon">🛠️</div>
+          <h3>Tools & Platforms</h3>
+          <div class="skill-item">
+            <div class="skill-info"><span>GitHub</span></div>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" data-width="80%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span>VS Code</span></div>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" data-width="88%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span>Google Colab</span></div>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" data-width="82%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span>MySQL</span></div>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" data-width="70%"></div>
+            </div>
+          </div>
+          <div class="tech-badges">
+            <span class="tech-badge">Version Control</span>
+            <span class="tech-badge">Cloud IDE</span>
+            <span class="tech-badge">Databases</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div><!-- /skills-page -->
+
+  <!-- PROJECTS PAGE -->
+  <div class="page" id="projects-page">
+  <section id="projects">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <span class="section-label">// Projects</span>
+        <h2 class="section-title">Featured Work</h2>
+      </div>
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card reveal">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?w=600&h=400&fit=crop"
+              alt="Smart First Aid Kit" />
+            <div class="project-overlay"><span>Click to expand ↓</span></div>
+          </div>
+          <div class="project-info">
+            <h3>Smart First Aid Kit – AI + IoT Health Assistant</h3>
+            <p>IoT-powered kit that predicts injury severity and recommends first aid steps using machine learning.</p>
+            <div class="project-tags">
+              <span>Arduino</span><span>Python</span><span>Scikit-Learn</span><span>IoT</span>
+            </div>
+          </div>
+          <div class="project-expanded">
+            <p>Injuries during emergencies often go untreated due to lack of medical knowledge. This system uses IoT
+              sensors (temperature, pulse, pressure) to capture real-time health data and feeds it into a trained ML
+              model that classifies injury severity. Based on the prediction, it displays step-by-step first aid
+              instructions on an LCD screen. Built with Arduino for hardware, Python and Scikit-Learn for the ML
+              pipeline, and serial communication between hardware and software.</p>
+            <div class="project-links">
+              <a href="#">📂 Source Code</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card reveal">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&h=400&fit=crop"
+              alt="Smart Irrigation" />
+            <div class="project-overlay"><span>Click to expand ↓</span></div>
+          </div>
+          <div class="project-info">
+            <h3>ML-Based Smart Irrigation System</h3>
+            <p>Predicts optimal watering schedules using soil and weather data with an ML model to reduce water waste.
+            </p>
+            <div class="project-tags">
+              <span>Python</span><span>Scikit-Learn</span><span>Arduino</span><span>Soil Sensors</span>
+            </div>
+          </div>
+          <div class="project-expanded">
+            <p>Traditional irrigation wastes water by following fixed schedules regardless of actual soil conditions.
+              This system uses soil moisture, temperature, and humidity sensors to collect real-time field data. A
+              trained ML model analyzes the data and predicts when and how much to irrigate, activating the water pump
+              automatically via Arduino. Reduces water consumption while maintaining optimal soil moisture levels for
+              healthy crop growth.</p>
+            <div class="project-links">
+              <a href="#">📂 Source Code</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card reveal">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?w=600&h=400&fit=crop"
+              alt="Smart Plant Monitoring" />
+            <div class="project-overlay"><span>Click to expand ↓</span></div>
+          </div>
+          <div class="project-info">
+            <h3>Smart Plant Monitoring & Automation System</h3>
+            <p>IoT system that monitors plant health in real time and automates watering and lighting conditions.</p>
+            <div class="project-tags">
+              <span>Arduino</span><span>ESP32</span><span>Sensors</span><span>Streamlit</span>
+            </div>
+          </div>
+          <div class="project-expanded">
+            <p>Caring for plants requires consistent monitoring of environmental conditions. This system uses soil
+              moisture, light intensity, and temperature sensors connected to an ESP32 microcontroller to continuously
+              track plant health. When conditions fall outside optimal ranges, it automatically activates a water pump
+              or grow lights. A Streamlit dashboard provides real-time visualization and historical data logging for
+              easy monitoring from any device.</p>
+            <div class="project-links">
+              <a href="#">📂 Source Code</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card reveal">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?w=600&h=400&fit=crop"
+              alt="Smart Plant Pot" />
+            <div class="project-overlay"><span>Click to expand ↓</span></div>
+          </div>
+          <div class="project-info">
+            <h3>Smart Plant Pot – IoT Plant Monitoring System</h3>
+            <p>IoT-based system that monitors plant health using real-time sensor data.</p>
+            <div class="project-tags">
+              <span>ESP32</span><span>Arduino IDE</span><span>Sensors</span><span>IoT</span><span>Embedded
+                Systems</span>
+            </div>
+          </div>
+          <div class="project-expanded">
+            <p>Developed an IoT-based Smart Plant Pot that continuously monitors soil moisture, temperature, and light
+              intensity to ensure optimal plant growth. Integrated sensors with an ESP32 microcontroller to collect
+              real-time data and display it on an OLED screen with visual indicators and animations. Implemented
+              Telegram integration to allow users to request live plant status remotely, making the system interactive
+              and user-friendly. The system reduces manual effort and helps maintain plant health efficiently.</p>
+            <div class="project-links">
+              <a href="#">📂 Source Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div><!-- /projects-page -->
+
+  <!-- EXPERIENCE PAGE -->
+  <div class="page" id="experience-page">
+  <section id="experience">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <span class="section-label">// Experience</span>
+        <h2 class="section-title">Where I've Worked</h2>
+      </div>
+      <div class="timeline">
+
+        <!-- Internship 1: Edunet Foundation -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">Jul 2025 – Present</div>
+            <h3>Artificial Intelligence Intern</h3>
+            <h4>Edunet Foundation | Shell</h4>
+            <ul>
+              <li>Built a real-time ML model integrating data from 20 sensors to monitor environmental conditions across
+                multiple parameters.</li>
+              <li>Designed an automated pump control system that activates or deactivates three pumps based on live
+                sensor inputs.</li>
+              <li>Applied machine learning algorithms to process and classify sensor data for actionable
+                decision-making.</li>
+              <li>Developed and tested the pipeline end-to-end, from data ingestion to real-time prediction and actuator
+                control.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Internship 2: Beau Roi Technologies -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">Jun 2025 – Jul 2025</div>
+            <h3>Machine Learning Intern</h3>
+            <h4>Beau Roi Technologies Private Limited · Sholinganallur, Chennai</h4>
+            <ul>
+              <li>Worked on a real-world ML project involving structured data preprocessing and augmentation techniques
+                to improve model accuracy.</li>
+              <li>Performed data cleaning, feature engineering, and dataset augmentation to enhance training quality.
+              </li>
+              <li>Contributed to UI feature enhancements, improving the overall user experience of the ML-powered
+                application.</li>
+              <li>Collaborated in a professional team environment, gaining hands-on exposure to end-to-end ML
+                development workflows.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  </div><!-- /experience-page -->
+
+  <!-- EDUCATION PAGE -->
+  <div class="page" id="education-page">
+  <section id="education">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <span class="section-label">// Education</span>
+        <h2 class="section-title">Academic Background</h2>
+      </div>
+      <div class="education-grid">
+
+        <!-- College -->
+        <div class="education-card reveal">
+          <div class="education-icon">🎓</div>
+          <h3>B.Tech in Electronics and Communication Engineering</h3>
+          <h4>SRM IST – Ramapuram, Chennai</h4>
+          <div class="date">2023 — 2027 (Expected)</div>
+          <p>CGPA: 9.09 / 10</p>
+        </div>
+
+        <!-- Class XII -->
+        <div class="education-card reveal">
+          <div class="education-icon">🏫</div>
+          <h3>Class XII – Science (MPC)</h3>
+          <h4>Al-Hira Model School, Chennai</h4>
+          <div class="date">Completed 2023</div>
+          <p>Board: CBSE · Percentage: 80%</p>
+        </div>
+
+        <!-- Class X -->
+        <div class="education-card reveal">
+          <div class="education-icon">📘</div>
+          <h3>Class X – PCMB</h3>
+          <h4>NSN Memorial School, Chennai</h4>
+          <div class="date">Completed 2021</div>
+          <p>Board: CBSE · Percentage: 70%</p>
+        </div>
+
+        <!-- Certifications -->
+        <div class="education-card cert-wide reveal">
+          <div class="education-icon">📜</div>
+          <h3>Certifications</h3>
+          <h4>Online Platforms</h4>
+          <div class="date">2024 — Present</div>
+          <p>
+            · Data Science for Engineers — NPTEL (Mar 2025) — <a
+              href="https://drive.google.com/file/d/1qhshc19D2JAlrDmwZL9MZoceoCLDPcfQ/view?usp=sharing" target="_blank"
+              rel="noopener noreferrer" style="color: var(--neon-blue); text-decoration: none; font-size: 0.8rem;">View
+              Certificate</a><br>
+            · Diploma in Computer Application — Apollo Computer Education Ltd (Apr 2024) — <a
+              href="https://drive.google.com/file/d/1krPWGOKipLRcR7qcWmYp1XvLUL-34EEv/view?usp=sharing" target="_blank"
+              rel="noopener noreferrer" style="color: var(--neon-blue); text-decoration: none; font-size: 0.8rem;">View
+              Certificate</a><br>
+            · Machine Learning and Deep Learning: Fundamentals and Applications — NPTEL (Oct 2025) — <a
+              href="https://drive.google.com/file/d/1pJWT3dLiZi3-5UiFTkPekGlsMQS1v4Xr/view?usp=sharing" target="_blank"
+              rel="noopener noreferrer" style="color: var(--neon-blue); text-decoration: none; font-size: 0.8rem;">View
+              Certificate</a><br>
+            · Programming, Data Structures and Algorithms using Python — NPTEL (Sept 2025) — <a
+              href="https://drive.google.com/file/d/1miv9zrQGn5NQTb5ZY4S0M8VPwN-5f-jp/view?usp=sharing" target="_blank"
+              rel="noopener noreferrer" style="color: var(--neon-blue); text-decoration: none; font-size: 0.8rem;">View
+              Certificate</a>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  </div><!-- /education-page -->
+
+  <!-- CONTACT PAGE -->
+  <div class="page" id="contact-page">
+  <section id="contact">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <span class="section-label">// Contact</span>
+        <h2 class="section-title">Let's Build Something Amazing</h2>
+      </div>
+
+      <!-- TOP ROW: Contact Info + Social Links -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+
+        <!-- BOX 1: CONTACT INFO -->
+        <div class="reveal"
+          style="background: var(--bg-card); border: 1px solid var(--glass-border); border-radius: var(--radius); padding: 2rem; backdrop-filter: blur(10px); position: relative; overflow: hidden; transition: var(--transition);"
+          onmouseenter="this.style.borderColor='rgba(0,212,255,0.25)'; this.style.transform='translateY(-4px)'"
+          onmouseleave="this.style.borderColor='var(--glass-border)'; this.style.transform='translateY(0)'">
+          <!-- Top accent bar -->
+          <div
+            style="position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(135deg, #00d4ff, #a855f7);">
+          </div>
+          <!-- Corner glow -->
+          <div
+            style="position: absolute; top: -60px; right: -60px; width: 160px; height: 160px; border-radius: 50%; background: radial-gradient(circle, rgba(0,212,255,0.07) 0%, transparent 70%); pointer-events: none;">
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1.8rem;">
+            <div
+              style="width: 38px; height: 38px; border-radius: 10px; background: rgba(0,212,255,0.1); border: 1px solid rgba(0,212,255,0.2); display: flex; align-items: center; justify-content: center; font-size: 1rem;">
+              📬</div>
+            <h3 style="font-size: 1.05rem; font-weight: 700; margin: 0;">Contact Info</h3>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 0.9rem;">
+            <!-- Email -->
+            <a href="mailto:mr0653@srmist.edu.in"
+              style="display: flex; align-items: center; gap: 1rem; padding: 0.9rem 1.1rem; border-radius: 10px; background: rgba(0,212,255,0.05); border: 1px solid rgba(0,212,255,0.1); text-decoration: none; color: var(--text-primary); transition: var(--transition);"
+              onmouseenter="this.style.background='rgba(0,212,255,0.1)'; this.style.borderColor='rgba(0,212,255,0.25)'; this.style.transform='translateX(4px)'"
+              onmouseleave="this.style.background='rgba(0,212,255,0.05)'; this.style.borderColor='rgba(0,212,255,0.1)'; this.style.transform='translateX(0)'">
+              <div
+                style="width: 36px; height: 36px; border-radius: 8px; background: rgba(0,212,255,0.12); display: flex; align-items: center; justify-content: center; font-size: 0.95rem; flex-shrink: 0;">
+                📧</div>
+              <div>
+                <div
+                  style="font-size: 0.7rem; color: var(--text-muted); font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2px;">
+                  Email</div>
+                <div style="font-size: 0.9rem; font-weight: 500; color: var(--neon-blue);">mr0653@srmist.edu.in</div>
+              </div>
+            </a>
+            <!-- Phone -->
+            <a href="tel:+918122978966"
+              style="display: flex; align-items: center; gap: 1rem; padding: 0.9rem 1.1rem; border-radius: 10px; background: rgba(168,85,247,0.05); border: 1px solid rgba(168,85,247,0.1); text-decoration: none; color: var(--text-primary); transition: var(--transition);"
+              onmouseenter="this.style.background='rgba(168,85,247,0.1)'; this.style.borderColor='rgba(168,85,247,0.25)'; this.style.transform='translateX(4px)'"
+              onmouseleave="this.style.background='rgba(168,85,247,0.05)'; this.style.borderColor='rgba(168,85,247,0.1)'; this.style.transform='translateX(0)'">
+              <div
+                style="width: 36px; height: 36px; border-radius: 8px; background: rgba(168,85,247,0.12); display: flex; align-items: center; justify-content: center; font-size: 0.95rem; flex-shrink: 0;">
+                📞</div>
+              <div>
+                <div
+                  style="font-size: 0.7rem; color: var(--text-muted); font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2px;">
+                  Phone</div>
+                <div style="font-size: 0.9rem; font-weight: 500; color: var(--neon-purple);">+91 81229 78966</div>
+              </div>
+            </a>
+            <!-- Location -->
+            <div
+              style="display: flex; align-items: center; gap: 1rem; padding: 0.9rem 1.1rem; border-radius: 10px; background: rgba(244,114,182,0.05); border: 1px solid rgba(244,114,182,0.1);">
+              <div
+                style="width: 36px; height: 36px; border-radius: 8px; background: rgba(244,114,182,0.12); display: flex; align-items: center; justify-content: center; font-size: 0.95rem; flex-shrink: 0;">
+                📍</div>
+              <div>
+                <div
+                  style="font-size: 0.7rem; color: var(--text-muted); font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2px;">
+                  Location</div>
+                <div style="font-size: 0.9rem; font-weight: 500; color: var(--neon-pink);">Hasthinapuram, Chennai – 600
+                  064</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BOX 2: SOCIAL LINKS -->
+        <div class="reveal"
+          style="background: var(--bg-card); border: 1px solid var(--glass-border); border-radius: var(--radius); padding: 2rem; backdrop-filter: blur(10px); position: relative; overflow: hidden; transition: var(--transition);"
+          onmouseenter="this.style.borderColor='rgba(168,85,247,0.25)'; this.style.transform='translateY(-4px)'"
+          onmouseleave="this.style.borderColor='var(--glass-border)'; this.style.transform='translateY(0)'">
+          <div
+            style="position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(135deg, #a855f7, #f472b6);">
+          </div>
+          <div
+            style="position: absolute; top: -60px; right: -60px; width: 160px; height: 160px; border-radius: 50%; background: radial-gradient(circle, rgba(168,85,247,0.07) 0%, transparent 70%); pointer-events: none;">
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1.8rem;">
+            <div
+              style="width: 38px; height: 38px; border-radius: 10px; background: rgba(168,85,247,0.1); border: 1px solid rgba(168,85,247,0.2); display: flex; align-items: center; justify-content: center; font-size: 1rem;">
+              🌐</div>
+            <h3 style="font-size: 1.05rem; font-weight: 700; margin: 0;">Social Links</h3>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 0.9rem;">
+            <!-- GitHub -->
+            <a href="https://github.com/NIYAZ3103" target="_blank" rel="noopener noreferrer"
+              style="display: flex; align-items: center; gap: 1rem; padding: 1rem 1.2rem; border-radius: 10px; background: rgba(255,255,255,0.02); border: 1px solid var(--glass-border); text-decoration: none; color: var(--text-primary); transition: var(--transition); position: relative; overflow: hidden;"
+              onmouseenter="this.style.borderColor='rgba(0,212,255,0.3)'; this.style.background='rgba(0,212,255,0.06)'; this.style.transform='translateX(4px)'"
+              onmouseleave="this.style.borderColor='var(--glass-border)'; this.style.background='rgba(255,255,255,0.02)'; this.style.transform='translateX(0)'">
+              <div
+                style="width: 42px; height: 42px; border-radius: 10px; background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <svg class="social-svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                </svg>
+              </div>
+              <div style="flex: 1;">
+                <div style="font-weight: 600; font-size: 0.95rem; margin-bottom: 2px;">GitHub</div>
+                <div style="font-size: 0.78rem; color: var(--text-muted); font-family: 'JetBrains Mono', monospace;">
+                  github.com/NIYAZ3103</div>
+              </div>
+              <div
+                style="font-size: 0.75rem; color: var(--neon-blue); font-family: 'JetBrains Mono', monospace; opacity: 0.7;">
+                ↗</div>
+            </a>
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/mohammed-niyaz-5869652b7/" target="_blank" rel="noopener noreferrer"
+              style="display: flex; align-items: center; gap: 1rem; padding: 1rem 1.2rem; border-radius: 10px; background: rgba(255,255,255,0.02); border: 1px solid var(--glass-border); text-decoration: none; color: var(--text-primary); transition: var(--transition); position: relative; overflow: hidden;"
+              onmouseenter="this.style.borderColor='rgba(0,212,255,0.3)'; this.style.background='rgba(0,212,255,0.06)'; this.style.transform='translateX(4px)'"
+              onmouseleave="this.style.borderColor='var(--glass-border)'; this.style.background='rgba(255,255,255,0.02)'; this.style.transform='translateX(0)'">
+              <div
+                style="width: 42px; height: 42px; border-radius: 10px; background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <svg class="social-svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg>
+              </div>
+              <div style="flex: 1;">
+                <div style="font-weight: 600; font-size: 0.95rem; margin-bottom: 2px;">LinkedIn</div>
+                <div style="font-size: 0.78rem; color: var(--text-muted); font-family: 'JetBrains Mono', monospace;">
+                  linkedin.com/in/mohammed-niyaz</div>
+              </div>
+              <div
+                style="font-size: 0.75rem; color: var(--neon-blue); font-family: 'JetBrains Mono', monospace; opacity: 0.7;">
+                ↗</div>
+            </a>
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/_.niyazzz_/?hl=en" target="_blank" rel="noopener noreferrer"
+              style="display: flex; align-items: center; gap: 1rem; padding: 1rem 1.2rem; border-radius: 10px; background: rgba(255,255,255,0.02); border: 1px solid var(--glass-border); text-decoration: none; color: var(--text-primary); transition: var(--transition);"
+              onmouseenter="this.style.borderColor='rgba(244,114,182,0.3)'; this.style.background='rgba(244,114,182,0.06)'; this.style.transform='translateX(4px)'"
+              onmouseleave="this.style.borderColor='var(--glass-border)'; this.style.background='rgba(255,255,255,0.02)'; this.style.transform='translateX(0)'">
+              <div
+                style="width: 42px; height: 42px; border-radius: 10px; background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <svg class="social-svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                </svg>
+              </div>
+              <div style="flex: 1;">
+                <div style="font-weight: 600; font-size: 0.95rem; margin-bottom: 2px;">Instagram</div>
+                <div style="font-size: 0.78rem; color: var(--text-muted); font-family: 'JetBrains Mono', monospace;">
+                  @_.niyazzz_</div>
+              </div>
+              <div
+                style="font-size: 0.75rem; color: var(--neon-pink); font-family: 'JetBrains Mono', monospace; opacity: 0.7;">
+                ↗</div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOTTOM ROW: AVAILABILITY — Full Width -->
+      <div class="reveal"
+        style="background: var(--bg-card); border: 1px solid var(--glass-border); border-radius: var(--radius); padding: 2.5rem 3rem; backdrop-filter: blur(10px); position: relative; overflow: hidden; transition: var(--transition); display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 3rem;"
+        onmouseenter="this.style.borderColor='rgba(0,212,255,0.2)'; this.style.transform='translateY(-3px)'"
+        onmouseleave="this.style.borderColor='var(--glass-border)'; this.style.transform='translateY(0)'">
+        <!-- Background glow blob -->
+        <div
+          style="position: absolute; left: -80px; top: -80px; width: 280px; height: 280px; border-radius: 50%; background: radial-gradient(circle, rgba(0,212,255,0.05) 0%, transparent 70%); pointer-events: none;">
+        </div>
+        <div
+          style="position: absolute; right: -60px; bottom: -60px; width: 200px; height: 200px; border-radius: 50%; background: radial-gradient(circle, rgba(168,85,247,0.05) 0%, transparent 70%); pointer-events: none;">
+        </div>
+        <!-- Top accent -->
+        <div
+          style="position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(135deg, #00d4ff, #a855f7, #f472b6);">
+        </div>
+
+        <div>
+          <div
+            style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.4rem 1rem; border-radius: 50px; background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.2); font-size: 0.75rem; color: #22c55e; font-family: 'JetBrains Mono', monospace; margin-bottom: 1.2rem;">
+            <span
+              style="width: 7px; height: 7px; border-radius: 50%; background: #22c55e; display: inline-block; animation: pulse-dot 2s infinite;"></span>
+            Available for Opportunities
+          </div>
+          <h3
+            style="font-size: 1.4rem; font-weight: 800; margin-bottom: 0.8rem; background: linear-gradient(135deg, #00d4ff, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+            Open to Collaborate</h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.8; max-width: 580px; margin: 0;">
+            I am currently open to <strong style="color: var(--text-primary);">internship</strong> and <strong
+              style="color: var(--text-primary);">project opportunities</strong> in AI/ML and IoT. Feel free to reach
+            out for collaboration, technical discussions, or any exciting ideas you'd like to bring to life.
+          </p>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 1rem; align-items: flex-end; flex-shrink: 0;">
+          <a href="mailto:mr0653@srmist.edu.in" class="btn btn-primary">Say Hello →</a>
+          <div style="display: flex; gap: 0.7rem;">
+            <a href="https://github.com/NIYAZ3103" target="_blank" class="social-link" aria-label="GitHub"
+              style="width: 40px; height: 40px;"><svg class="social-svg-icon" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+              </svg></a>
+            <a href="https://www.linkedin.com/in/mohammed-niyaz-5869652b7/" target="_blank" class="social-link"
+              aria-label="LinkedIn" style="width: 40px; height: 40px;"><svg class="social-svg-icon" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg></a>
+            <a href="https://www.instagram.com/_.niyazzz_/?hl=en" target="_blank" class="social-link"
+              aria-label="Instagram" style="width: 40px; height: 40px;"><svg class="social-svg-icon" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+              </svg></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  </div><!-- /contact-page -->
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>Built by <a href="#">Mohammed Niyaz</a> · © 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
