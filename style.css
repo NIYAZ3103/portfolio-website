@@ -1171,21 +1171,23 @@ section {
 /* ===== SKILLS ===== */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 1.8rem;
 }
 
 .skill-category {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(0, 212, 255, 0.12);
-  border-radius: 20px;
-  padding: 2.5rem;
-  backdrop-filter: blur(12px);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 3px solid;
+  border-image: linear-gradient(90deg, rgba(0, 212, 255, 0.8), rgba(168, 85, 247, 0.8)) 1;
+  border-radius: 10px;
+  padding: 1.8rem;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
   position: relative;
-  overflow: hidden;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.08);
-  -webkit-backdrop-filter: blur(12px);
+  overflow: visible;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.08);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .skill-category::before {
@@ -1194,36 +1196,38 @@ section {
   top: 0;
   left: 0;
   right: 0;
-  height: 2px;
-  background: var(--gradient-1);
-  opacity: 0;
-  transition: opacity 0.35s ease;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(0, 212, 255, 0.9), rgba(168, 85, 247, 0.9));
+  border-radius: 10px 10px 0 0;
+  opacity: 1;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px rgba(0, 212, 255, 0.4);
 }
 
 .skill-category:hover {
-  transform: translateY(-6px);
-  border-color: rgba(0, 212, 255, 0.25);
-  box-shadow: 0 12px 48px rgba(0, 212, 255, 0.15), inset 0 1px 1px rgba(255, 255, 255, 0.08);
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 24px rgba(0, 212, 255, 0.12), inset 0 1px 1px rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
 }
 
 .skill-category:hover::before {
-  opacity: 1;
+  box-shadow: 0 0 12px rgba(0, 212, 255, 0.6);
 }
 
 .skill-icon {
-  font-size: 2.2rem;
-  margin-bottom: 1.2rem;
+  display: none;
 }
 
 .skill-category h3 {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   font-weight: 700;
-  margin-bottom: 1.8rem;
+  margin-bottom: 1.5rem;
   color: var(--text-primary);
 }
 
 .skill-item {
-  margin-bottom: 1.6rem;
+  margin-bottom: 1.3rem;
 }
 
 .skill-name {
@@ -1277,8 +1281,8 @@ section {
 .tech-badges {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.7rem;
-  margin-top: 1.4rem;
+  gap: 0.6rem;
+  margin-top: 1.2rem;
 }
 
 .tech-badge {
@@ -1309,25 +1313,55 @@ section {
 }
 
 .project-card {
-  background: var(--bg-card);
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
   overflow: hidden;
   backdrop-filter: blur(10px);
-  transition: var(--transition);
+  transition: all 0.3s ease;
   cursor: pointer;
+  position: relative;
+  box-shadow: 
+    0 0 1px rgba(0, 212, 255, 0.2),
+    inset 0 1px 1px rgba(255, 255, 255, 0.05);
+}
+
+/* Gradient border glow effect using pseudo-element */
+.project-card::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 12px;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.3), rgba(168, 85, 247, 0.3));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 
 .project-card:hover {
   transform: translateY(-5px);
-  border-color: rgba(168, 85, 247, 0.3);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(0, 212, 255, 0.2);
+  box-shadow: 
+    0 8px 24px rgba(0, 212, 255, 0.15),
+    0 0 20px rgba(0, 212, 255, 0.1),
+    inset 0 1px 1px rgba(255, 255, 255, 0.08);
+}
+
+.project-card:hover::before {
+  opacity: 1;
 }
 
 .project-image {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  border-bottom: 1px solid var(--glass-border);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   background: linear-gradient(135deg, rgba(0, 212, 255, 0.08), rgba(168, 85, 247, 0.08));
   position: relative;
   overflow: hidden;
@@ -1544,81 +1578,8 @@ section {
 }
 
 /* ===== EDUCATION ===== */
-.education-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 1.5rem;
-}
-
-.education-card {
-  background: var(--bg-card);
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius);
-  padding: 2rem;
-  backdrop-filter: blur(10px);
-  transition: var(--transition);
-  position: relative;
-  overflow: hidden;
-}
-
-.education-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: var(--gradient-2);
-  transform: scaleX(0);
-  transition: var(--transition);
-  transform-origin: left;
-}
-
-.education-card:hover {
-  transform: translateY(-3px);
-}
-
-.education-card:hover::before {
-  transform: scaleX(1);
-}
-
-.education-icon {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.education-card h3 {
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 0.3rem;
-}
-
-.education-card h4 {
-  font-size: 0.95rem;
-  color: var(--neon-purple);
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-}
-
-.education-card .date {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.8rem;
-  color: var(--neon-blue);
-  margin-bottom: 0.8rem;
-}
-
-.education-card p {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-}
-
-/* Certifications card — wider and centered */
-.education-card.cert-wide {
-  grid-column: 1 / -1;
-  max-width: 75%;
-  margin: 0 auto;
-  width: 100%;
-}
+/* Reuses .timeline and .timeline-item from Experience section */
+/* No additional CSS needed - education now uses the same timeline structure */
 
 /* Social SVG icons */
 .social-svg-icon {
@@ -1971,10 +1932,6 @@ a:hover .social-svg-icon {
     grid-template-columns: 1fr;
   }
 
-  .education-grid {
-    grid-template-columns: 1fr;
-  }
-
   .about-float-card {
     display: none;
   }
@@ -2007,4 +1964,752 @@ a:hover .social-svg-icon {
     min-width: 120px;
     text-align: center;
   }
+}
+
+/* ============================================================
+   SKILLS BOOK — HOLOGRAPHIC 3D UPGRADE
+   Only overrides/extends book-specific selectors.
+   All page logic, content, and nav remain untouched.
+   ============================================================ */
+
+/* ── 1. PERSPECTIVE WRAPPER ─────────────────────────────── */
+.about-image-wrapper {
+  perspective: 1200px;
+  perspective-origin: 50% 40%;
+}
+
+/* ── 2. CLOSED BOOK: 3D FLOAT + DEEP GLOW ───────────────── */
+.skills-book-closed {
+  transform-style: preserve-3d;
+  /* Override flat animation with full 3D float */
+  animation: book-float-3d 6s ease-in-out infinite;
+  /* Multi-layer holographic glow */
+  box-shadow:
+    0 0 0 1px rgba(0, 212, 255, 0.15),
+    0 0 40px rgba(0, 212, 255, 0.25),
+    0 0 80px rgba(168, 85, 247, 0.18),
+    0 0 140px rgba(0, 212, 255, 0.08),
+    0 30px 60px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    inset 0 -1px 0 rgba(0, 212, 255, 0.08);
+  /* Gradient border via outline trick */
+  border: 1.5px solid rgba(0, 212, 255, 0.25);
+  /* Glassmorphism base */
+  background: rgba(8, 10, 26, 0.72);
+  backdrop-filter: blur(22px) saturate(160%);
+  -webkit-backdrop-filter: blur(22px) saturate(160%);
+}
+
+.skills-book-closed:hover {
+  box-shadow:
+    0 0 0 1.5px rgba(0, 212, 255, 0.4),
+    0 0 60px rgba(0, 212, 255, 0.45),
+    0 0 120px rgba(168, 85, 247, 0.28),
+    0 0 180px rgba(0, 212, 255, 0.12),
+    0 35px 70px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18),
+    inset 0 0 30px rgba(0, 212, 255, 0.07);
+  border-color: rgba(0, 212, 255, 0.55);
+  /* Maintain float + add slight tilt on hover */
+  animation: book-hover-tilt 0.4s ease-out forwards;
+}
+
+@keyframes book-float-3d {
+  0%, 100% {
+    transform: translateY(0px) rotateX(1deg) rotateY(-3deg);
+  }
+  25% {
+    transform: translateY(-5px) rotateX(2deg) rotateY(1.5deg);
+  }
+  50% {
+    transform: translateY(-10px) rotateX(-1deg) rotateY(3deg);
+  }
+  75% {
+    transform: translateY(-5px) rotateX(-2deg) rotateY(-1.5deg);
+  }
+}
+
+@keyframes book-hover-tilt {
+  to {
+    transform: translateY(-8px) scale(1.03) rotateX(2deg) rotateY(1deg);
+  }
+}
+
+/* ── 3. HOLOGRAM LINES (closed book scanlines) ───────────── */
+.book-hologram-lines {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  pointer-events: none;
+  /* Horizontal scanlines */
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 5px,
+    rgba(0, 212, 255, 0.018) 5px,
+    rgba(0, 212, 255, 0.018) 6px
+  );
+  animation: scanlines-scroll 10s linear infinite;
+  opacity: 0.8;
+}
+
+/* Moving highlight stripe over the scanlines */
+.book-hologram-lines::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(0, 212, 255, 0.06) 45%,
+    rgba(168, 85, 247, 0.04) 55%,
+    transparent 100%
+  );
+  background-size: 100% 200%;
+  animation: holo-stripe 5s ease-in-out infinite;
+}
+
+@keyframes scanlines-scroll {
+  from { background-position: 0 0; }
+  to   { background-position: 0 120px; }
+}
+
+@keyframes holo-stripe {
+  0%   { background-position: 0 -100%; }
+  50%  { background-position: 0 100%; }
+  100% { background-position: 0 -100%; }
+}
+
+/* ── 4. BOOK SHIMMER (light-streak effect) ───────────────── */
+.book-shimmer {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(
+    115deg,
+    transparent 20%,
+    rgba(255, 255, 255, 0.06) 45%,
+    rgba(0, 212, 255, 0.10) 50%,
+    rgba(255, 255, 255, 0.04) 55%,
+    transparent 80%
+  );
+  background-size: 250% 250%;
+  animation: shimmer-sweep 5s ease-in-out infinite;
+  mix-blend-mode: screen;
+}
+
+@keyframes shimmer-sweep {
+  0%   { background-position: 150% 150%; opacity: 0.6; }
+  40%  { background-position: -50% -50%; opacity: 1; }
+  100% { background-position: 150% 150%; opacity: 0.6; }
+}
+
+/* ── 5. GLOW RING enhancement ────────────────────────────── */
+.book-glow-ring {
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(
+    circle,
+    rgba(0, 212, 255, 0.22) 0%,
+    rgba(168, 85, 247, 0.10) 50%,
+    transparent 70%
+  );
+  filter: blur(12px);
+  animation: glow-pulse-3d 3s ease-in-out infinite;
+  z-index: 1;
+}
+
+@keyframes glow-pulse-3d {
+  0%, 100% {
+    transform: scale(1) rotateZ(0deg);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.35) rotateZ(180deg);
+    opacity: 1;
+  }
+}
+
+/* ── 6. BOOK PARTICLES: extra variety + size ─────────────── */
+.book-particles span:nth-child(7)  { left: 45%; animation-delay: 2.5s; width: 2px; height: 2px; }
+.book-particles span:nth-child(8)  { left: 60%; animation-delay: 3.5s; width: 4px; height: 4px; background: var(--neon-pink); }
+.book-particles span:nth-child(9)  { left: 10%; animation-delay: 0.5s; width: 2px; height: 2px; }
+.book-particles span:nth-child(10) { left: 80%; animation-delay: 1.5s; width: 3px; height: 3px; background: var(--neon-purple); }
+
+/* ── 7. OPEN BOOK: 3D entrance + enhanced glow ──────────── */
+.skills-book-open {
+  transform-style: preserve-3d;
+  background: rgba(7, 9, 22, 0.88);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1.5px solid rgba(0, 212, 255, 0.22);
+  box-shadow:
+    0 0 0 1px rgba(168, 85, 247, 0.08),
+    0 0 50px rgba(0, 212, 255, 0.20),
+    0 0 100px rgba(168, 85, 247, 0.14),
+    0 0 160px rgba(0, 212, 255, 0.06),
+    0 30px 70px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.10),
+    inset 0 0 40px rgba(0, 212, 255, 0.03);
+}
+
+/* Override the gradient top bar to be thicker + glowing */
+.skills-book-open::before {
+  height: 3px;
+  background: linear-gradient(90deg, #00d4ff, #a855f7, #f472b6, #00d4ff);
+  background-size: 200% 100%;
+  animation: border-flow 4s linear infinite;
+  box-shadow: 0 0 12px rgba(0, 212, 255, 0.6), 0 0 24px rgba(168, 85, 247, 0.3);
+}
+
+@keyframes border-flow {
+  from { background-position: 0% 0%; }
+  to   { background-position: 200% 0%; }
+}
+
+/* 3D entrance animation override */
+.skills-book-open.visible {
+  animation: book-holo-open 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.skills-book-open.closing {
+  animation: book-holo-close 0.38s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes book-holo-open {
+  0%   { opacity: 0; transform: scale(0.82) translateY(24px) rotateX(8deg); }
+  60%  { opacity: 1; transform: scale(1.04) translateY(-4px) rotateX(-1deg); }
+  100% { opacity: 1; transform: scale(1.02) translateY(0) rotateX(0deg); }
+}
+
+@keyframes book-holo-close {
+  from { opacity: 1; transform: scale(1.02) translateY(0) rotateX(0deg); }
+  to   { opacity: 0; transform: scale(0.82) translateY(24px) rotateX(8deg); }
+}
+
+/* ── 8. HOLOGRAPHIC SCANLINE inside open book ────────────── */
+.book-holo-scanline {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  border-radius: var(--radius);
+  pointer-events: none;
+  overflow: hidden;
+  /* Static horizontal scanlines */
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 4px,
+    rgba(0, 212, 255, 0.014) 4px,
+    rgba(0, 212, 255, 0.014) 5px
+  );
+}
+
+/* Moving sweep bar */
+.book-holo-scanline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 30%;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(0, 212, 255, 0.07) 40%,
+    rgba(168, 85, 247, 0.05) 60%,
+    transparent 100%
+  );
+  animation: holo-beam-sweep 5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes holo-beam-sweep {
+  0%   { top: -30%; opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 0.8; }
+  100% { top: 130%; opacity: 0; }
+}
+
+/* ── 9. AMBIENT PARTICLES (around open book) ─────────────── */
+.book-ambient-particles {
+  position: absolute;
+  inset: -30px;
+  pointer-events: none;
+  z-index: 0;
+  overflow: visible;
+}
+
+.book-ambient-particles span {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0;
+  animation: ambient-orbit 4s ease-in-out infinite;
+}
+
+.book-ambient-particles span:nth-child(1) {
+  width: 5px; height: 5px;
+  background: var(--neon-blue);
+  top: 15%; left: -5px;
+  box-shadow: 0 0 8px var(--neon-blue);
+  animation-delay: 0s;
+}
+.book-ambient-particles span:nth-child(2) {
+  width: 3px; height: 3px;
+  background: var(--neon-purple);
+  top: 55%; left: -5px;
+  box-shadow: 0 0 6px var(--neon-purple);
+  animation-delay: 0.8s;
+}
+.book-ambient-particles span:nth-child(3) {
+  width: 4px; height: 4px;
+  background: var(--neon-blue);
+  top: 5%; right: -5px;
+  box-shadow: 0 0 8px var(--neon-blue);
+  animation-delay: 1.6s;
+}
+.book-ambient-particles span:nth-child(4) {
+  width: 3px; height: 3px;
+  background: var(--neon-pink);
+  top: 75%; right: -5px;
+  box-shadow: 0 0 6px var(--neon-pink);
+  animation-delay: 2.4s;
+}
+.book-ambient-particles span:nth-child(5) {
+  width: 4px; height: 4px;
+  background: var(--neon-blue);
+  bottom: -5px; left: 20%;
+  box-shadow: 0 0 8px var(--neon-blue);
+  animation-delay: 0.4s;
+}
+.book-ambient-particles span:nth-child(6) {
+  width: 3px; height: 3px;
+  background: var(--neon-purple);
+  bottom: -5px; left: 55%;
+  box-shadow: 0 0 6px var(--neon-purple);
+  animation-delay: 1.2s;
+}
+.book-ambient-particles span:nth-child(7) {
+  width: 5px; height: 5px;
+  background: var(--neon-pink);
+  bottom: -5px; left: 80%;
+  box-shadow: 0 0 8px var(--neon-pink);
+  animation-delay: 2s;
+}
+.book-ambient-particles span:nth-child(8) {
+  width: 3px; height: 3px;
+  background: var(--neon-blue);
+  top: -5px; left: 40%;
+  box-shadow: 0 0 6px var(--neon-blue);
+  animation-delay: 2.8s;
+}
+
+@keyframes ambient-orbit {
+  0%   { opacity: 0;   transform: translate(0, 0) scale(0.5); }
+  20%  { opacity: 0.9; transform: translate(8px, -14px) scale(1); }
+  60%  { opacity: 0.7; transform: translate(-6px, -26px) scale(0.8); }
+  85%  { opacity: 0.4; transform: translate(4px, -38px) scale(0.5); }
+  100% { opacity: 0;   transform: translate(0, -48px) scale(0); }
+}
+
+/* ── 10. BOOK PAGE glassmorphism + edge glow ─────────────── */
+.book-page {
+  background: rgba(255, 255, 255, 0.025);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  /* Subtle 3D tilt while idle */
+  transform: translateX(60px) rotateY(4deg);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.book-page.active {
+  transform: translateX(0) rotateY(0deg);
+  /* Gradient edge highlight on active page */
+  box-shadow:
+    inset 1px 0 0 rgba(0, 212, 255, 0.15),
+    inset -1px 0 0 rgba(168, 85, 247, 0.10),
+    inset 0 0 30px rgba(0, 212, 255, 0.04);
+}
+
+.book-page.exit-left {
+  transform: translateX(-60px) rotateY(-4deg);
+}
+
+/* ── 11. SKILL BADGE: holographic shimmer on hover ───────── */
+.page-skill-badge {
+  position: relative;
+  overflow: hidden;
+  background: rgba(0, 212, 255, 0.06);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 212, 255, 0.20);
+  transition: all 0.3s ease;
+}
+
+/* Light-streak shine */
+.page-skill-badge::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 80%;
+  height: 100%;
+  background: linear-gradient(
+    105deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.12) 50%,
+    transparent 70%
+  );
+  transition: left 0.55s ease;
+  pointer-events: none;
+}
+
+.page-skill-badge:hover::after {
+  left: 150%;
+}
+
+.page-skill-badge:hover {
+  background: rgba(0, 212, 255, 0.14);
+  border-color: rgba(0, 212, 255, 0.42);
+  box-shadow:
+    0 4px 16px rgba(0, 212, 255, 0.18),
+    0 0 8px rgba(0, 212, 255, 0.12);
+  transform: translateY(-3px) scale(1.04);
+}
+
+/* ── 12. BOOK HEADER: subtle glass band ──────────────────── */
+.book-header {
+  background: rgba(0, 212, 255, 0.04);
+  border-bottom: 1px solid rgba(0, 212, 255, 0.14);
+  backdrop-filter: blur(8px);
+}
+
+/* ── 13. BOOK NAV: glass strip ───────────────────────────── */
+.book-nav {
+  background: rgba(0, 212, 255, 0.03);
+  border-top: 1px solid rgba(0, 212, 255, 0.12);
+}
+
+/* ── 14. NAV BUTTON: neon press effect ───────────────────── */
+.book-nav-btn:active {
+  transform: translateY(1px) scale(0.97);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.25), inset 0 0 10px rgba(0, 212, 255, 0.10);
+}
+
+/* ── 15. DOTS: elongated active dot ──────────────────────── */
+.book-dot.active {
+  width: 20px;
+  border-radius: 4px;
+  box-shadow: 0 0 14px rgba(0, 212, 255, 0.7), 0 0 4px rgba(0, 212, 255, 1);
+  transition: all 0.35s ease;
+}
+
+/* ── 16. PAGE CATEGORY ICON: layered glow ────────────────── */
+.page-category-icon {
+  filter:
+    drop-shadow(0 0 8px rgba(0, 212, 255, 0.55))
+    drop-shadow(0 0 20px rgba(168, 85, 247, 0.30))
+    drop-shadow(0 0 40px rgba(0, 212, 255, 0.15));
+  animation: icon-pulse 3s ease-in-out infinite;
+}
+
+@keyframes icon-pulse {
+  0%, 100% {
+    filter:
+      drop-shadow(0 0 8px rgba(0, 212, 255, 0.55))
+      drop-shadow(0 0 20px rgba(168, 85, 247, 0.30));
+    transform: scale(1);
+  }
+  50% {
+    filter:
+      drop-shadow(0 0 14px rgba(0, 212, 255, 0.85))
+      drop-shadow(0 0 32px rgba(168, 85, 247, 0.50))
+      drop-shadow(0 0 60px rgba(0, 212, 255, 0.20));
+    transform: scale(1.06);
+  }
+}
+
+/* ── 17. CATEGORY TITLE: gradient text ───────────────────── */
+.page-category-title {
+  background: linear-gradient(135deg, #e8e8f0 0%, #00d4ff 60%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── 18. CLOSE BUTTON: extra glow on hover ───────────────── */
+.book-close-btn:hover {
+  box-shadow: 0 0 16px rgba(244, 114, 182, 0.40);
+}
+
+/* ── 19. RESPONSIVE: simplify 3D on mobile ───────────────── */
+@media (max-width: 768px) {
+  .about-image-wrapper {
+    perspective: none;
+  }
+  .skills-book-closed {
+    animation: book-float 5s ease-in-out infinite;
+    transform-style: flat;
+  }
+  .book-ambient-particles {
+    display: none;
+  }
+}
+
+
+/* ============================================================
+   HOLOGRAM BOOK — HERO IMAGE
+   Scoped only to .holo-book and .holo-book-wrapper.
+   No other styles modified.
+   ============================================================ */
+
+/* Wrapper: adds top spacing and centers everything */
+.holo-book-wrapper {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+}
+
+/* The image itself */
+.holo-book {
+  width: clamp(220px, 30vw, 360px);
+  height: auto;
+  object-fit: contain;
+  cursor: pointer;
+  /* Holographic multi-layer glow */
+  filter:
+    drop-shadow(0 0 14px rgba(0, 212, 255, 0.70))
+    drop-shadow(0 0 36px rgba(168, 85, 247, 0.45))
+    drop-shadow(0 0 70px rgba(0, 212, 255, 0.20));
+  /* Smooth entrance */
+  animation:
+    holo-book-float 5s ease-in-out infinite,
+    holo-book-fadein 0.9s ease both;
+  animation-delay: 0s, 1s;
+  transition:
+    transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+    filter 0.4s ease;
+  /* Prevent text-select on click */
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Hover: scale up + intensified glow */
+.holo-book:hover {
+  transform: scale(1.08) translateY(-6px);
+  filter:
+    drop-shadow(0 0 22px rgba(0, 212, 255, 0.95))
+    drop-shadow(0 0 50px rgba(168, 85, 247, 0.65))
+    drop-shadow(0 0 100px rgba(0, 212, 255, 0.30));
+}
+
+/* Click: brief press-down before page switch */
+.holo-book:active {
+  transform: scale(0.97) translateY(-2px);
+  filter:
+    drop-shadow(0 0 10px rgba(0, 212, 255, 0.50))
+    drop-shadow(0 0 24px rgba(168, 85, 247, 0.35));
+  transition: transform 0.12s ease, filter 0.12s ease;
+}
+
+/* Floating up-down animation */
+@keyframes holo-book-float {
+  0%, 100% { transform: translateY(0px);  }
+  50%       { transform: translateY(-12px); }
+}
+
+/* Fade-in on page load */
+@keyframes holo-book-fadein {
+  from { opacity: 0; transform: translateY(20px) scale(0.92); }
+  to   { opacity: 1; transform: translateY(0)    scale(1);    }
+}
+
+/* "Click to explore" hint label */
+.holo-book-hint {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--neon-blue);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  pointer-events: none;
+  /* Blink to draw attention */
+  animation: hint-appear 1s ease 2.5s forwards;
+}
+
+@keyframes hint-appear {
+  to { opacity: 0.65; transform: translateY(0); }
+}
+
+.holo-book-wrapper:hover .holo-book-hint {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fade-out flash before page switch */
+.holo-book.switching {
+  animation: holo-book-switch-out 0.32s ease forwards;
+}
+
+@keyframes holo-book-switch-out {
+  0%   { opacity: 1;  transform: scale(1.05) translateY(-4px); }
+  40%  { opacity: 0.6; transform: scale(1.12) translateY(-10px); }
+  100% { opacity: 0;   transform: scale(0.95) translateY(6px);  }
+}
+
+/* Responsive — smaller on mobile */
+@media (max-width: 768px) {
+  .holo-book {
+    width: clamp(160px, 55vw, 240px);
+  }
+  .holo-book-wrapper {
+    margin-top: 2rem;
+  }
+}
+
+
+/* ============================================================
+   HOLOGRAM BOOK — ABOUT SECTION PLACEMENT FIX
+   Strips the old card-box look from skills-book-closed and
+   lets the PNG image be the only visible element.
+   The div's id/onclick are kept intact for JS compatibility.
+   ============================================================ */
+
+/* ── Strip the card-box skin from the closed-state wrapper ── */
+.skills-book-closed {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  /* Override the 3D float with a simple clean float */
+  animation: holo-about-float 5s ease-in-out infinite !important;
+  /* Remove fixed aspect-ratio so the image determines height */
+  aspect-ratio: unset !important;
+  padding: 1rem 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.85rem !important;
+  position: relative !important;
+  cursor: pointer !important;
+}
+
+/* Also strip the ::before gradient border overlay */
+.skills-book-closed::before {
+  display: none !important;
+}
+
+/* ── Hologram book image in about section ─────────────────── */
+.holo-book {
+  /* Size: fills the about-image-wrapper column nicely */
+  width: clamp(200px, 75%, 320px);
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-drag: none;
+  /* Multi-layer holographic glow */
+  filter:
+    drop-shadow(0 0 16px rgba(0, 212, 255, 0.75))
+    drop-shadow(0 0 42px rgba(168, 85, 247, 0.52))
+    drop-shadow(0 0 85px rgba(0, 212, 255, 0.22));
+  transition:
+    filter 0.4s ease,
+    transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  /* No separate float — parent wrapper floats */
+  animation: none !important;
+}
+
+/* Hover: glow intensifies + subtle scale */
+.skills-book-closed:hover .holo-book {
+  filter:
+    drop-shadow(0 0 24px rgba(0, 212, 255, 0.98))
+    drop-shadow(0 0 58px rgba(168, 85, 247, 0.72))
+    drop-shadow(0 0 120px rgba(0, 212, 255, 0.32));
+  transform: scale(1.06);
+}
+
+/* Click: brief press-down */
+.skills-book-closed:active .holo-book {
+  transform: scale(0.97);
+  transition: transform 0.12s ease;
+}
+
+/* ── Parent wrapper float animation ───────────────────────── */
+@keyframes holo-about-float {
+  0%, 100% { transform: translateY(0px);  }
+  50%       { transform: translateY(-12px); }
+}
+
+/* ── "Click to explore" hint below the image ─────────────── */
+.holo-book-hint {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--neon-blue);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  pointer-events: none;
+  text-align: center;
+  /* Fade in after 2.5s to catch attention */
+  animation: hint-appear 1s ease 2.5s forwards;
+}
+
+/* Fully visible on hover */
+.skills-book-closed:hover .holo-book-hint {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* ── Perspective wrapper: no 3D needed now image handles depth */
+.about-image-wrapper {
+  perspective: none;
+}
+
+/* ── Hide the old hero holo-book-wrapper if still present ─── */
+.holo-book-wrapper {
+  display: none !important;
+}
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .holo-book {
+    width: clamp(150px, 60vw, 220px);
+  }
+}
+
+
+/* ============================================================
+   FIX: skills-book-closed hover no longer shifts position.
+   Previous hover rules applied transform + swapped animation,
+   which fought the float mid-cycle and caused a downward jump.
+   ============================================================ */
+.skills-book-closed:hover {
+  /* Kill the rogue translateY / scale that caused the jump */
+  transform: unset !important;
+  /* Keep float running — don't swap to book-hover-tilt */
+  animation: holo-about-float 5s ease-in-out infinite !important;
+  /* Strip border/box-shadow changes (image glow handles the effect) */
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Also block the ::before gradient overlay from appearing */
+.skills-book-closed:hover::before {
+  display: none !important;
 }

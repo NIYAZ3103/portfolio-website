@@ -359,4 +359,3 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===== SET HOME AS ACTIVE BY DEFAULT + trigger initial reveals =====
   updateActiveNavLink('home-page');
 });
-

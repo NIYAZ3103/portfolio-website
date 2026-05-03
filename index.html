@@ -95,18 +95,15 @@
       </div>
       <div class="about-grid">
         <div class="about-image-wrapper reveal-left">
-          <!-- SKILLS BOOK: Closed State -->
+          <!-- SKILLS BOOK: Closed State — hologram PNG image -->
           <div class="skills-book-closed" id="skills-book-closed" onclick="openSkillsBook()">
-            <div class="book-glow-ring"></div>
-            <div class="book-hologram-lines"></div>
-            <div class="book-icon">📘</div>
-            <div class="book-label">Skills</div>
-            <div class="book-subtitle">Click to explore</div>
-            <div class="book-particles">
-              <span></span><span></span><span></span><span></span><span></span><span></span>
-              <span></span><span></span><span></span><span></span>
-            </div>
-            <div class="book-shimmer"></div>
+            <img
+              src="assets/hologram-book.png"
+              alt="Skills Book — click to explore"
+              id="holoBook"
+              class="holo-book"
+            />
+            <div class="holo-book-hint">Click to explore skills →</div>
           </div>
 
           <!-- SKILLS BOOK: Open State -->
@@ -230,21 +227,21 @@
             </div>
           </div>
           <div class="skill-item">
-            <div class="skill-name">NLP</div>
-            <div class="skill-bar">
-              <div class="skill-bar-fill" data-width="70%"></div>
-            </div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-name">Tesseract OCR</div>
+            <div class="skill-name">NLP & Tesseract OCR</div>
             <div class="skill-bar">
               <div class="skill-bar-fill" data-width="72%"></div>
             </div>
           </div>
+          <div class="skill-item">
+            <div class="skill-name">Data Structures & Algorithms</div>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" data-width="76%"></div>
+            </div>
+          </div>
           <div class="tech-badges">
+            <span class="tech-badge">Regression & Classification</span>
             <span class="tech-badge">Data Preprocessing</span>
             <span class="tech-badge">Model Training</span>
-            <span class="tech-badge">OCR</span>
           </div>
         </div>
         <!-- IoT & Embedded -->
@@ -264,21 +261,21 @@
             </div>
           </div>
           <div class="skill-item">
-            <div class="skill-name">Sensor Integration</div>
+            <div class="skill-name">Sensor Interfacing & Real-time Monitoring</div>
             <div class="skill-bar">
               <div class="skill-bar-fill" data-width="78%"></div>
             </div>
           </div>
           <div class="skill-item">
-            <div class="skill-name">Embedded C</div>
+            <div class="skill-name">Embedded C & Circuit Prototyping</div>
             <div class="skill-bar">
               <div class="skill-bar-fill" data-width="70%"></div>
             </div>
           </div>
           <div class="tech-badges">
-            <span class="tech-badge">Real-time Monitoring</span>
-            <span class="tech-badge">Prototyping</span>
-            <span class="tech-badge">Wearables</span>
+            <span class="tech-badge">IoT System Design</span>
+            <span class="tech-badge">Real-time Systems</span>
+            <span class="tech-badge">Hardware Integration</span>
           </div>
         </div>
         <!-- Programming & Development -->
@@ -286,33 +283,33 @@
           <div class="skill-icon">💻</div>
           <h3>Programming & Development</h3>
           <div class="skill-item">
-            <div class="skill-info"><span>C / C++</span></div>
-            <div class="skill-bar">
-              <div class="skill-bar-fill" data-width="78%"></div>
-            </div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-info"><span>Java</span></div>
-            <div class="skill-bar">
-              <div class="skill-bar-fill" data-width="72%"></div>
-            </div>
-          </div>
-          <div class="skill-item">
             <div class="skill-info"><span>Python</span></div>
             <div class="skill-bar">
               <div class="skill-bar-fill" data-width="85%"></div>
             </div>
           </div>
           <div class="skill-item">
-            <div class="skill-info"><span>HTML / Streamlit</span></div>
+            <div class="skill-info"><span>C / C++</span></div>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" data-width="78%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span>Core Java</span></div>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" data-width="72%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span>HTML & Streamlit</span></div>
             <div class="skill-bar">
               <div class="skill-bar-fill" data-width="75%"></div>
             </div>
           </div>
           <div class="tech-badges">
-            <span class="tech-badge">Streamlit</span>
-            <span class="tech-badge">Web Basics</span>
             <span class="tech-badge">Problem Solving</span>
+            <span class="tech-badge">Algorithm Design</span>
+            <span class="tech-badge">Dashboard Development</span>
           </div>
         </div>
         <!-- Tools & Platforms -->
@@ -320,33 +317,33 @@
           <div class="skill-icon">🛠️</div>
           <h3>Tools & Platforms</h3>
           <div class="skill-item">
-            <div class="skill-info"><span>GitHub</span></div>
-            <div class="skill-bar">
-              <div class="skill-bar-fill" data-width="80%"></div>
-            </div>
-          </div>
-          <div class="skill-item">
             <div class="skill-info"><span>VS Code</span></div>
             <div class="skill-bar">
               <div class="skill-bar-fill" data-width="88%"></div>
             </div>
           </div>
           <div class="skill-item">
-            <div class="skill-info"><span>Google Colab</span></div>
+            <div class="skill-info"><span>GitHub</span></div>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" data-width="80%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span>Arduino IDE & Google Colab</span></div>
             <div class="skill-bar">
               <div class="skill-bar-fill" data-width="82%"></div>
             </div>
           </div>
           <div class="skill-item">
-            <div class="skill-info"><span>MySQL</span></div>
+            <div class="skill-info"><span>MySQL & Canva</span></div>
             <div class="skill-bar">
-              <div class="skill-bar-fill" data-width="70%"></div>
+              <div class="skill-bar-fill" data-width="72%"></div>
             </div>
           </div>
           <div class="tech-badges">
             <span class="tech-badge">Version Control</span>
-            <span class="tech-badge">Cloud IDE</span>
-            <span class="tech-badge">Databases</span>
+            <span class="tech-badge">Cloud IDE & Embedded IDE</span>
+            <span class="tech-badge">Database & Design</span>
           </div>
         </div>
       </div>
@@ -372,17 +369,16 @@
           </div>
           <div class="project-info">
             <h3>Smart First Aid Kit – AI + IoT Health Assistant</h3>
-            <p>IoT-powered kit that predicts injury severity and recommends first aid steps using machine learning.</p>
+            <p>IoT-powered system that predicts injury severity using machine learning classification algorithms.</p>
             <div class="project-tags">
-              <span>Arduino</span><span>Python</span><span>Scikit-Learn</span><span>IoT</span>
+              <span>Arduino</span><span>Python</span><span>Scikit-Learn</span><span>Sensor Interfacing</span><span>Real-time Monitoring</span>
             </div>
           </div>
           <div class="project-expanded">
             <p>Injuries during emergencies often go untreated due to lack of medical knowledge. This system uses IoT
               sensors (temperature, pulse, pressure) to capture real-time health data and feeds it into a trained ML
-              model that classifies injury severity. Based on the prediction, it displays step-by-step first aid
-              instructions on an LCD screen. Built with Arduino for hardware, Python and Scikit-Learn for the ML
-              pipeline, and serial communication between hardware and software.</p>
+              model built with Scikit-Learn that classifies injury severity using classification algorithms. Based on the prediction, it displays step-by-step first aid
+              instructions on an LCD screen. Implemented serial communication between Arduino hardware and Python software for seamless sensor data integration and real-time prediction.</p>
             <div class="project-links">
               <a href="#">📂 Source Code</a>
             </div>
@@ -398,18 +394,16 @@
           </div>
           <div class="project-info">
             <h3>ML-Based Smart Irrigation System</h3>
-            <p>Predicts optimal watering schedules using soil and weather data with an ML model to reduce water waste.
-            </p>
+            <p>Predicts optimal watering schedules using regression algorithms and IoT sensor data integration.</p>
             <div class="project-tags">
-              <span>Python</span><span>Scikit-Learn</span><span>Arduino</span><span>Soil Sensors</span>
+              <span>Python</span><span>Scikit-Learn</span><span>Arduino</span><span>Sensor Integration</span><span>Real-time Monitoring</span>
             </div>
           </div>
           <div class="project-expanded">
             <p>Traditional irrigation wastes water by following fixed schedules regardless of actual soil conditions.
               This system uses soil moisture, temperature, and humidity sensors to collect real-time field data. A
-              trained ML model analyzes the data and predicts when and how much to irrigate, activating the water pump
-              automatically via Arduino. Reduces water consumption while maintaining optimal soil moisture levels for
-              healthy crop growth.</p>
+              trained ML model using Scikit-Learn regression algorithms analyzes the data and predicts optimal irrigation levels, activating the water pump
+              automatically via Arduino. Integrates sensor data processing with embedded control systems to reduce water consumption while maintaining optimal soil moisture levels.</p>
             <div class="project-links">
               <a href="#">📂 Source Code</a>
             </div>
@@ -425,17 +419,16 @@
           </div>
           <div class="project-info">
             <h3>Smart Plant Monitoring & Automation System</h3>
-            <p>IoT system that monitors plant health in real time and automates watering and lighting conditions.</p>
+            <p>IoT system combining multiple sensors with real-time monitoring and cloud-based dashboard visualization.</p>
             <div class="project-tags">
-              <span>Arduino</span><span>ESP32</span><span>Sensors</span><span>Streamlit</span>
+              <span>ESP32</span><span>Arduino</span><span>Sensor Interfacing</span><span>Streamlit</span><span>Real-time Monitoring</span>
             </div>
           </div>
           <div class="project-expanded">
             <p>Caring for plants requires consistent monitoring of environmental conditions. This system uses soil
               moisture, light intensity, and temperature sensors connected to an ESP32 microcontroller to continuously
-              track plant health. When conditions fall outside optimal ranges, it automatically activates a water pump
-              or grow lights. A Streamlit dashboard provides real-time visualization and historical data logging for
-              easy monitoring from any device.</p>
+              track plant health with real-time monitoring. When conditions fall outside optimal ranges, it automatically activates a water pump
+              or grow lights through embedded control logic. A Streamlit dashboard provides real-time visualization, historical data logging, and remote monitoring capabilities for seamless plant care management.</p>
             <div class="project-links">
               <a href="#">📂 Source Code</a>
             </div>
@@ -451,18 +444,16 @@
           </div>
           <div class="project-info">
             <h3>Smart Plant Pot – IoT Plant Monitoring System</h3>
-            <p>IoT-based system that monitors plant health using real-time sensor data.</p>
+            <p>IoT-based system with sensor interfacing, real-time monitoring, and remote notification capabilities.</p>
             <div class="project-tags">
-              <span>ESP32</span><span>Arduino IDE</span><span>Sensors</span><span>IoT</span><span>Embedded
-                Systems</span>
+              <span>ESP32</span><span>Arduino IDE</span><span>Sensor Interfacing</span><span>IoT System Design</span><span>Embedded C</span>
             </div>
           </div>
           <div class="project-expanded">
-            <p>Developed an IoT-based Smart Plant Pot that continuously monitors soil moisture, temperature, and light
-              intensity to ensure optimal plant growth. Integrated sensors with an ESP32 microcontroller to collect
-              real-time data and display it on an OLED screen with visual indicators and animations. Implemented
-              Telegram integration to allow users to request live plant status remotely, making the system interactive
-              and user-friendly. The system reduces manual effort and helps maintain plant health efficiently.</p>
+            <p>Developed an IoT-based Smart Plant Pot using ESP32 that continuously monitors soil moisture, temperature, and light
+              intensity for optimal plant growth. Integrated multiple sensors with the ESP32 microcontroller using embedded C to collect
+              real-time data and display on an OLED screen with visual indicators. Implemented IoT system design principles with Telegram integration
+              to enable remote plant status monitoring and notifications, reducing manual effort and maintaining plant health efficiently.</p>
             <div class="project-links">
               <a href="#">📂 Source Code</a>
             </div>
@@ -491,14 +482,13 @@
             <h3>Artificial Intelligence Intern</h3>
             <h4>Edunet Foundation | Shell</h4>
             <ul>
-              <li>Built a real-time ML model integrating data from 20 sensors to monitor environmental conditions across
-                multiple parameters.</li>
-              <li>Designed an automated pump control system that activates or deactivates three pumps based on live
-                sensor inputs.</li>
-              <li>Applied machine learning algorithms to process and classify sensor data for actionable
+              <li>Built a real-time ML model using Python and Scikit-Learn integrating data from 20 sensors to monitor environmental conditions with classification algorithms.</li>
+              <li>Designed an automated embedded control system that activates or deactivates three pumps based on live
+                sensor inputs using Arduino and embedded logic.</li>
+              <li>Applied machine learning classification algorithms to process sensor data and make real-time predictions for intelligent
                 decision-making.</li>
-              <li>Developed and tested the pipeline end-to-end, from data ingestion to real-time prediction and actuator
-                control.</li>
+              <li>Developed and tested the end-to-end pipeline, from sensor data ingestion to ML model training to real-time prediction and actuator
+                control, integrating Python backend with embedded hardware systems.</li>
             </ul>
           </div>
         </div>
@@ -511,14 +501,14 @@
             <h3>Machine Learning Intern</h3>
             <h4>Beau Roi Technologies Private Limited · Sholinganallur, Chennai</h4>
             <ul>
-              <li>Worked on a real-world ML project involving structured data preprocessing and augmentation techniques
-                to improve model accuracy.</li>
-              <li>Performed data cleaning, feature engineering, and dataset augmentation to enhance training quality.
+              <li>Worked on real-world ML projects using Python involving structured data preprocessing, feature engineering, and augmentation techniques
+                to improve model accuracy and classification performance.</li>
+              <li>Performed data cleaning, exploratory analysis, feature engineering, and dataset augmentation to enhance model training quality using Scikit-Learn.
               </li>
-              <li>Contributed to UI feature enhancements, improving the overall user experience of the ML-powered
-                application.</li>
+              <li>Contributed to UI feature enhancements using Streamlit and HTML, improving the overall user experience of the ML-powered
+                application's data visualization and interaction.</li>
               <li>Collaborated in a professional team environment, gaining hands-on exposure to end-to-end ML
-                development workflows.</li>
+                development workflows from data preprocessing to model deployment.</li>
             </ul>
           </div>
         </div>
@@ -536,59 +526,67 @@
         <span class="section-label">// Education</span>
         <h2 class="section-title">Academic Background</h2>
       </div>
-      <div class="education-grid">
+      <div class="timeline">
 
         <!-- College -->
-        <div class="education-card reveal">
-          <div class="education-icon">🎓</div>
-          <h3>B.Tech in Electronics and Communication Engineering</h3>
-          <h4>SRM IST – Ramapuram, Chennai</h4>
-          <div class="date">2023 — 2027 (Expected)</div>
-          <p>CGPA: 9.09 / 10</p>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>B.Tech in Electronics and Communication Engineering</h3>
+            <h4>SRM IST – Ramapuram, Chennai</h4>
+            <div class="date">2023 — 2027 (Expected)</div>
+            <p>CGPA: 9.09 / 10</p>
+          </div>
         </div>
 
         <!-- Class XII -->
-        <div class="education-card reveal">
-          <div class="education-icon">🏫</div>
-          <h3>Class XII – Science (MPC)</h3>
-          <h4>Al-Hira Model School, Chennai</h4>
-          <div class="date">Completed 2023</div>
-          <p>Board: CBSE · Percentage: 80%</p>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Class XII – Science (MPC)</h3>
+            <h4>Al-Hira Model School, Chennai</h4>
+            <div class="date">Completed 2023</div>
+            <p>Board: CBSE · Percentage: 80%</p>
+          </div>
         </div>
 
         <!-- Class X -->
-        <div class="education-card reveal">
-          <div class="education-icon">📘</div>
-          <h3>Class X – PCMB</h3>
-          <h4>NSN Memorial School, Chennai</h4>
-          <div class="date">Completed 2021</div>
-          <p>Board: CBSE · Percentage: 70%</p>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Class X – PCMB</h3>
+            <h4>NSN Memorial School, Chennai</h4>
+            <div class="date">Completed 2021</div>
+            <p>Board: CBSE · Percentage: 70%</p>
+          </div>
         </div>
 
         <!-- Certifications -->
-        <div class="education-card cert-wide reveal">
-          <div class="education-icon">📜</div>
-          <h3>Certifications</h3>
-          <h4>Online Platforms</h4>
-          <div class="date">2024 — Present</div>
-          <p>
-            · Data Science for Engineers — NPTEL (Mar 2025) — <a
-              href="https://drive.google.com/file/d/1qhshc19D2JAlrDmwZL9MZoceoCLDPcfQ/view?usp=sharing" target="_blank"
-              rel="noopener noreferrer" style="color: var(--neon-blue); text-decoration: none; font-size: 0.8rem;">View
-              Certificate</a><br>
-            · Diploma in Computer Application — Apollo Computer Education Ltd (Apr 2024) — <a
-              href="https://drive.google.com/file/d/1krPWGOKipLRcR7qcWmYp1XvLUL-34EEv/view?usp=sharing" target="_blank"
-              rel="noopener noreferrer" style="color: var(--neon-blue); text-decoration: none; font-size: 0.8rem;">View
-              Certificate</a><br>
-            · Machine Learning and Deep Learning: Fundamentals and Applications — NPTEL (Oct 2025) — <a
-              href="https://drive.google.com/file/d/1pJWT3dLiZi3-5UiFTkPekGlsMQS1v4Xr/view?usp=sharing" target="_blank"
-              rel="noopener noreferrer" style="color: var(--neon-blue); text-decoration: none; font-size: 0.8rem;">View
-              Certificate</a><br>
-            · Programming, Data Structures and Algorithms using Python — NPTEL (Sept 2025) — <a
-              href="https://drive.google.com/file/d/1miv9zrQGn5NQTb5ZY4S0M8VPwN-5f-jp/view?usp=sharing" target="_blank"
-              rel="noopener noreferrer" style="color: var(--neon-blue); text-decoration: none; font-size: 0.8rem;">View
-              Certificate</a>
-          </p>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Certifications</h3>
+            <h4>Online Platforms</h4>
+            <div class="date">2024 — Present</div>
+            <p>
+              · Data Science for Engineers — NPTEL (Mar 2025) — <a
+                href="https://drive.google.com/file/d/1qhshc19D2JAlrDmwZL9MZoceoCLDPcfQ/view?usp=sharing" target="_blank"
+                rel="noopener noreferrer" style="color: var(--neon-blue); text-decoration: none; font-size: 0.8rem;">View
+                Certificate</a><br>
+              · Diploma in Computer Application — Apollo Computer Education Ltd (Apr 2024) — <a
+                href="https://drive.google.com/file/d/1krPWGOKipLRcR7qcWmYp1XvLUL-34EEv/view?usp=sharing" target="_blank"
+                rel="noopener noreferrer" style="color: var(--neon-blue); text-decoration: none; font-size: 0.8rem;">View
+                Certificate</a><br>
+              · Machine Learning and Deep Learning: Fundamentals and Applications — NPTEL (Oct 2025) — <a
+                href="https://drive.google.com/file/d/1pJWT3dLiZi3-5UiFTkPekGlsMQS1v4Xr/view?usp=sharing" target="_blank"
+                rel="noopener noreferrer" style="color: var(--neon-blue); text-decoration: none; font-size: 0.8rem;">View
+                Certificate</a><br>
+              · Programming, Data Structures and Algorithms using Python — NPTEL (Sept 2025) — <a
+                href="https://drive.google.com/file/d/1miv9zrQGn5NQTb5ZY4S0M8VPwN-5f-jp/view?usp=sharing" target="_blank"
+                rel="noopener noreferrer" style="color: var(--neon-blue); text-decoration: none; font-size: 0.8rem;">View
+                Certificate</a>
+            </p>
+          </div>
         </div>
 
       </div>
